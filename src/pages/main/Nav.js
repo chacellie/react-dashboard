@@ -1,25 +1,26 @@
+import { Link } from 'react-router-dom';
 import { FaHome } from 'react-icons/fa';
-
+import { FaQuestionCircle } from "react-icons/fa";
 const Nav = () => {
 
     return (
-        <div className="container-fluid">
-            <div className="row">
+        
                 <nav id="sidebarMenu" className="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
                     <div className="position-sticky pt-3">
                         <ul className="nav flex-column">
-                            <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/">
-                                    <FaHome className="feather"/>
+                        <li className="nav-item">
+                            <Link to="/" className="nav-link" aria-current="page">
+                                <FaHome className="feather"/>
                                     Dashboard
-                                </a>
+                            </Link>
                             </li>
 
                             <li className="nav-item">
-                                <a className="nav-link" href="#">
-                                    <span data-feather="file"></span>
-                                    Orders
-                                </a>
+                                <Link to="/about" className="nav-link">
+
+                                <FaQuestionCircle className="feather"/>
+                                    About
+                                </Link>
                             </li>
 
                             <li className="nav-item">
@@ -50,8 +51,7 @@ const Nav = () => {
 
 
                 </nav>
-            </div>
-        </div>
+
     )
 
 }
